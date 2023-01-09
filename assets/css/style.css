@@ -451,6 +451,21 @@ footer{
     color: white;
     font-family: 'Secular One'
 }
+.ballon{
+    position: absolute;
+    width: 200px;
+    height: 350px;
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+    0%,100%{
+        top: 0;
+    }
+    50%{
+        top: 30%;
+    }
+}
 /*responsive code starts from here (media query)*/
 
 @media (min-width:1441px) and (max-width:2560px) {
