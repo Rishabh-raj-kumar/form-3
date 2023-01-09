@@ -1,0 +1,541 @@
+:root{
+
+    /*Buttons style*/
+    --primary-btn : violet;
+    --secondary-btn : yellow;
+    --contact-btn : green;
+    --bg-col : #00724B;
+
+    /*font sizes*/
+    --lg-ft-s : 4.2rem;
+    --md-ft-s : 2.5rem;
+    --sm-ft-s : 1rem;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100vw;
+    position: relative;
+    overflow-x: hidden;
+}
+
+header,footer{
+    position: absolute;
+    width: 100vw;
+    padding:10px;
+}
+
+input{
+    padding: 3px;
+    border: none;
+    outline: none;
+}
+
+section{
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+}
+
+/*header starts from here */
+
+header{
+    position: relative;
+    min-height: 10vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    font-family: 'Josefin Sans';
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background: white;
+    z-index: 99;
+}
+header .logo span{
+    color: #A5024E;
+}
+nav ul{
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+nav ul li{
+    padding: 3px;
+    position: relative;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+nav ul li:nth-child(1)::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background: var(--contact-btn);
+}
+
+nav ul li::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 3px;
+    border-radius: 5px;
+    background: var( --contact-btn);
+    transition: 0.5s;
+}
+nav ul li:not(.active):hover::after{
+    right: 0;
+  width:100%;
+}
+#connect{
+    display: flex;
+    gap: 1rem;
+}
+#connect-us{
+    border-bottom: 2px solid black;
+}
+.inp_btn{
+    background: rgb(208, 5, 38);
+    color: white;
+    border-radius:3px;
+    padding: 5px;
+    letter-spacing: 1px;
+}
+#hamb{
+    display: none;
+}
+/*//////////  header ends here /////////////*/
+
+/*//////////  Portfolio starts from here /////////////*/
+
+#portfolio{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#portfolio .my_illus{
+    flex: 1 0 30%;
+    display: grid;
+    position: relative;
+}
+.my_illus .man{
+    margin-left: 20%;
+    max-height: 500px;
+}
+.my_illus .dog{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    max-height: 300px;
+}
+.info-head{
+    flex: 1 1 50%;
+    font-family: 'Secular One';
+    position: relative;
+}
+.watch-btn-box i,.info-head h1{
+    color: #00724B;
+}
+.info-head h1{
+    width: 75%;
+    letter-spacing: 2px;
+    font-size: var(--lg-ft-s);
+}
+.info-head p{
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+}
+.watch-btn-box{
+    margin-top: 20px;
+    margin-left: 15px;
+    width:160px;
+    border-radius:20px;
+    border: 2px solid var( --contact-btn);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 5px;
+}
+.watch-btn-box i{
+    font-size:1.5rem;
+}
+.connect-icons{
+    position:absolute;
+    width: 150px;
+    height: auto;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #00724B;
+    display: flex;
+    gap: 1rem;
+    justify-content:center;
+    right: -8%;
+    transform: rotate(-90deg);
+    color: white;
+    top: 50%;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.connect-icons i:hover{
+    color: gold;
+}
+/*//////////  Portfolio ends here /////////////*/
+
+/*//////////  About Starts from here  /////////////*/
+
+#About{
+    height: 100vh;
+    font-family: 'Josefin Sans';
+}
+.info-about{
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+}
+.info-about h1{
+    font-family: 'Josefin Sans';
+    width: 200px;
+    position: relative;
+    color: var( --bg-col);
+    font-size: var(--md-ft-s);
+}
+.info-about h1::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background: var(--bg-col);
+}
+#my-info{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.personal-img-box{
+    flex: 1 1 30%;
+    padding: 3rem;
+}
+.img-card-bx{
+    width: 100%;
+    min-height: 200px;
+}
+.img-card-bx img{
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 255, 34, 0.3);
+}
+
+.personal-about{
+    flex: 1 0 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.about-quote h2{
+    font-size:var(--md-ft-s);
+}
+.about-quote summary{
+    float:right;
+}
+.about-quote,.about-param{
+    width: 50%;
+}
+.resume{
+    font-family:monospace;
+    width: auto;
+    padding:5px;
+    border-radius: 8px;
+    outline: none;
+    background: transparent;
+    border: 1.5px solid var(--bg-col);
+    font-size: 16px;
+    font-weight:500;
+    color: var(--bg-col);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.contact-icons{
+    display: flex;
+    gap: 1rem;
+}
+.contact-icons i{
+    font-size:18px;
+}
+
+/*//////////  About Ends here  /////////////*/
+
+/*//////////  Contact starts from here /////////////*/
+
+.contact-page{
+    display: flex;
+    gap: 1rem;
+}
+.tour-man-box{
+    flex: 1 0 40%;
+    margin-left: 5%;
+}
+.contact-form{
+    padding: 2rem;
+    flex: 1 0 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    gap: 2rem;
+}
+.contact-form input{
+    padding: 10px;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    font-size: 20px;
+    box-shadow: 5px 10px 20px rgba(1, 1, 1, 0.203);
+    border-radius: 5px;
+}
+#textA{
+    padding:10px;
+    height: 20%;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    font-size: 15px;
+    box-shadow: 5px 10px 20px rgba(1, 1, 1, 0.203);
+    outline: none;
+}
+.contact-form #submit{
+     background: var(--bg-col);
+     color: white;
+     letter-spacing: 2px;
+     text-transform: uppercase;
+     cursor: pointer;
+}
+
+/*//////////  Contact ends here /////////////*/
+
+/*//////////  Gallery starts from here /////////////*/
+#gallery{
+    min-height: 120vh;
+}
+.gallery-box{
+    margin: 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.gallery-part{
+   width: 100%;
+   border-radius: 5px;
+   box-shadow: 5px 10px 20px rgba(1, 1, 1, 0.203);
+   transition: 0.5s;
+   position: relative;
+}
+.gallery-part::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f1f999;
+    transform: rotate(10deg);
+    z-index: -1;
+    transition: 0.5s;
+}
+.gallery-part:hover::after{
+   transform: rotate(0);
+}
+.gallery-part img{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+/*//////////  Gallery ends here /////////////*/
+
+/*//////////  Footer starts from here /////////////*/
+
+footer{
+    font-family: 'Josefin Sans';
+    position: absolute;
+    background: #0f1018d3;
+    color: white;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+}
+#block-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#block1{
+    padding: 5px;
+    margin-right: 10%;
+    position: relative;
+    height: 100%;
+    width: 80%;
+    border-right: 2px solid #f6f7ff6d;
+}
+#block1 address{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+#contact-footer{
+    display: flex;
+}
+.cont-inp{
+    width: 150px;
+    padding: 5px;
+    outline: none;
+}
+.submit_inp{
+    width: 70px;
+    background: orange;
+    padding: 5px;
+}
+.contact-block{
+    width: 100vw;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+}
+/*responsive code starts from here (media query)*/
+
+@media (min-width:1441px) and (max-width:2560px) {
+    /*header part*/
+      html{
+        font-size:90%;
+      }
+     .logo{
+        font-size: var(--lg-ft-s);
+     }  
+     nav ul{
+        gap: 2.5rem;
+     }
+     nav ul li a{
+          font-size: var(--md-ft-s);
+     }
+     nav ul li:nth-child(1)::after,nav ul li::after{
+        height: 8px;
+     }
+     #connect-us{
+        font-size: var(--md-ft-s);
+     }
+     .inp_btn{
+        font-size: 25px;
+        letter-spacing: 2px;
+     }
+}
+
+@media (max-width:430px){
+    header{
+        justify-content: center;
+    }
+    header,nav ul,#connect{
+        flex-direction: column;
+        align-items: start;
+    }
+    nav ul,#connect{
+        transition: 0.5s;
+        margin-top:1em;
+    }
+    nav,#connect{
+        transition: 0.5s;
+        display: none;
+    }
+    nav.active,#connect.active{
+        display: block;
+    }
+    #hamb{
+        display: block;
+        position:absolute;
+        right: 20px;
+        top:  15px;
+    }
+    #portfolio{
+        flex-direction: column;
+        height: 80vh;
+    }
+    #portfolio .my_illus{
+        flex: 0;
+    }
+    .my_illus .man{
+        margin-left: 0;
+        height: 400px;
+    }
+    .my_illus .dog{
+        left: 10%;
+        height: 200px;
+    }
+    .info-head h1{
+        width: 100%;
+        font-size: var(--md-ft-s);
+    }
+    .connect-icons{
+        top: 20%;
+        left: -15%;
+        transform: rotate(90deg);
+    }
+    #About{
+        height: 85vh;
+    }
+    #my-info{
+        margin: 0;
+        flex-direction: column-reverse;
+    }
+    .personal-about{
+        flex: 1 0 100%;
+    }
+    .about-quote,.about-param{
+       width: 100%;
+    }
+    #gallery{
+       height: auto;
+    }
+    .contact-page{
+        flex-direction: column;
+    }
+    #contact-us{
+        height: auto;
+    }
+    #block-container{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    #block1{
+        border: none;
+    }
+    #contact-footer{
+        align-items: center;
+    }
+    .contact-block{
+        justify-content: center;
+    }
+}
