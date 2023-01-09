@@ -426,6 +426,31 @@ footer{
     justify-content: flex-end;
     margin-right: 10%;
 }
+
+/* Thanks page */
+
+.center-card{
+   display: grid;
+   place-items: center;
+}
+#styled-div{
+    width: 50vw;
+    height: 50vh;
+    background: #00724B;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius:5px;
+    padding: 20px;
+}
+#styled-div h3{
+    font-size: 3rem;
+    font-family: 'Josefin Sans';
+    color : white;   
+}
+#styled-div p{
+    margin-top: 10%;
+    color: white;
+    font-family: 'Secular One'
+}
 /*responsive code starts from here (media query)*/
 
 @media (min-width:1441px) and (max-width:2560px) {
@@ -537,5 +562,15 @@ footer{
     }
     .contact-block{
         justify-content: center;
+    }
+    #styled-div{
+        width: 90vw;
+        height:40vh;
+    }
+    #styled-div h3{
+       font-size:2rem;
+    }
+    #styled-div p{
+       font-size:1.3rem;
     }
 }
